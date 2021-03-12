@@ -18,7 +18,7 @@ const checkId = async (req, res, next) => {
   
   const validateProject = (req, res, next) => {
     if (!req.body.name || !req.body.description.trim()) {
-      res.status(422).json({
+      res.status(400).json({
         message: 'all fields must be filled out',
       })
     } else {

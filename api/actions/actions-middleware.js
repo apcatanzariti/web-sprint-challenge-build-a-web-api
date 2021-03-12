@@ -18,7 +18,7 @@ const checkId = async (req, res, next) => {
   
   const validateAction = (req, res, next) => {
     if (!req.body.description || !req.body.notes.trim()) {
-      res.status(422).json({
+      res.status(400).json({
         message: 'all fields must be filled out',
       })
     } else {
