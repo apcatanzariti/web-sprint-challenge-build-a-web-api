@@ -11,8 +11,8 @@ const checkId = async (req, res, next) => {
         req.action = action;
         next();
       }
-    } catch (err) {
-      next(err);
+    } catch {
+        res.status(500).json({ message: 'something went wrong checking the Id...' });
     }
   }
   
