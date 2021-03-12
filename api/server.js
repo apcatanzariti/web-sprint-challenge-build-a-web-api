@@ -12,7 +12,7 @@ server.use('/api/projects', projectsRouter);
 // Do NOT `server.listen()` inside this file!
 
 server.use('*', (req, res) => {
-    res.send(`I'm working!`);
+    res.send(`I'm working!!`);
 });
 
 module.exports = server;
